@@ -3,7 +3,7 @@ angular.module('starter.controllers')
   $scope.text = "YOYOYOYO";
 
   $scope.fire = function(){
-    console.log('holla');
+    console.log('hiiiiiyo');
   };
 
 });
