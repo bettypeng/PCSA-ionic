@@ -1,8 +1,31 @@
 <ion-view view-title="Get Medical Help">
+<div ng-app>
   <ion-content>
     <h1>Get Medical Help</h1>
-    <p>dslfjgk
+ <ion-list>
+      <ion-item ng-repeat="contact in contacts" ng-mouseenter="hover(contact)" ng-mouseleave="hover(contact)" >
+        <h3>{{contact.name}}</h3>
+        <div ng-show="contact.show">
+        	<p>{{contact.phone}}</p>
+    		<p>{{contact.email}}</p>
+    		<p>{{contact.summary}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <!--<div ng-repeat="contact in contacts" >
+    	<h3>{{contact.name}}</h3>
+    	<p>{{contact.phone}}</p>
+    	<p>{{contact.email}}</p>
+    	<p>{{contact.summary}}</p>
+    </div>-->
+
+
+
+
+   <!-- <p>dslfjgk
       hlgjkh asdkgjhdlk gjhkgjhsl {{text}} kdjghkglh</p>
-    <ion-item ng-click="fire()"><ion-item/>
+    <ion-item ng-click="fire()"><ion-item/>-->
   </ion-content>
+</div>
 </ion-view>
