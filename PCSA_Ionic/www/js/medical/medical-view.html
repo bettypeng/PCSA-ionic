@@ -2,16 +2,17 @@
 <div ng-app>
   <ion-content>
     <h1>Get Medical Help</h1>
- <ion-list>
-      <ion-item ng-repeat="contact in contacts" ng-mouseenter="hover(contact)" ng-mouseleave="hover(contact)" >
-        <h3>{{contact.name}}</h3>
-        <div ng-show="contact.show">
-        	<p>{{contact.phone}}</p>
-    		<p>{{contact.email}}</p>
-    		<p>{{contact.summary}}</p>
-        </div>
-      </ion-item>
-    </ion-list>
+	 	<ion-list>
+	      <ion-item ng-repeat="contact in contacts" ng-click="hover(contact)" ng-mouseenter="hover(contact)" ng-mouseleave="hover(contact)">
+	        <h3>{{contact.name}}</h3>
+	        <div ng-show="contact.show">
+
+	        	<p>{{contact.phone}}</p>
+	    		<p>{{contact.email}}</p>
+	    		<p>{{contact.summary}}</p>
+	        </div>
+	      </ion-item>
+	    </ion-list>
 
     <!--<div ng-repeat="contact in contacts" >
     	<h3>{{contact.name}}</h3>

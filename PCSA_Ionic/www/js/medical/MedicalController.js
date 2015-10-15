@@ -1,6 +1,8 @@
 angular.module('starter.controllers')
 .controller('MedicalController', function($scope, $stateParams) {
 
+	$scope.person = true;
+
 	$scope.contacts=[{
 		"name": "PC SAVES Anonymous Helpline",
 		"phone": "Call or Text: Outside the US: 001-408-844-HELP(4357), within the US: 408-844-HELP(4357)",
@@ -27,17 +29,27 @@ angular.module('starter.controllers')
 		"show": false
 	}];
 
+
+
 	$scope.hover = function(fruit) {
         // Shows/hides the delete button on hover
-        return fruit.show = ! fruit.show;
+        $scope.person = !$scope.person;
+        return fruit.show = fruit.show;
     };
 
-  $scope.text = "YOYOYOYO";
+    $scope.$watch('$scope.person', function(newValue, oldValue){
+    	if (newValue !== oldValue){
+    		console.log('Changed!');
+  
+    	}
+    })
+
+ // $scope.text = "YOYOYOYO";
 
 
 
-  $scope.fire = function(){
+  /*$scope.fire = function(){
     $scope.text = "woohoo";
-  };
+  };*/
 
 });
